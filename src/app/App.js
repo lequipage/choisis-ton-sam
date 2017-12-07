@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './App.scss';
+import Home from './pages/Home/Home';
 
 const App = () => (
   <div className="packit">
-    <h1 className="packit__title">NDI</h1>
+    <Home />
   </div>
 );
 

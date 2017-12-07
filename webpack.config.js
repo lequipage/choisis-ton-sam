@@ -16,7 +16,7 @@ const config = {
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.scss', '.css', '.jpeg', '.jpg', '.gif', '.png'],
     alias: {
-      config: path.resolve(__dirname, 'config', 'config.js'),
+      // config: path.resolve(__dirname, 'config', 'config.js'),
       commons: path.resolve(__dirname, 'src/components/commons'),
       images: path.resolve(__dirname, 'src/assets/images'),
     },
