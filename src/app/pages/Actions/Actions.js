@@ -8,7 +8,11 @@ import './Actions.scss';
 import Header from './Header';
 import Box from '../../components/Box';
 import Create from '../Create';
+<<<<<<< HEAD
 import Current from '../Current';
+=======
+import Past from '../Past';
+>>>>>>> bbcd247f1063d34b054882fea9e41e47410bd39b
 // import './Home.scss';
 
 const Actions = () => (
@@ -26,6 +30,7 @@ const Actions = () => (
             <Box type="past" color="blue" description="Si jamais tu as oublier qui était le sam à la derniere soirée, et qui était le souyon" />
           </Link>
           <Route path="/create" component={Create} />
+          <Route path="/past" component={Past} />
       </div>
           <Route path="/current" component={Current} />
     </div>

@@ -1,0 +1,66 @@
+@import "src/assets/stylesheets/config";
+
+.home {
+  &__header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100vw;
+    height: 968px;
+    background-size: cover;
+  }
+
+  &__register,
+  &__connect {
+    width: 200px;
+    height: 50px;
+    margin-top: 20px;
+    margin-right: 20px;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  &__connect {
+    background-color: $white;
+    box-shadow: $shadow-z2;
+  }
+
+  &__register {
+    background-color: transparent;
+    border: 1px $white solid;
+    color: $white;
+  }
+
+  &__block {
+    margin-right: 10vw;
+  }
+
+  &__concept {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    height: 550px;
+    color: $black;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: $black;
+    text-align: center;
+  }
+}
+
+.concept {
+  &__title {
+    margin-bottom: 12px;
+    font-size: 64px;
+  }
+
+  &__paragraph {
+    font-size: 24px;
+  }
+}

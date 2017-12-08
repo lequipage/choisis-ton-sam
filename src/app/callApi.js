@@ -27,12 +27,25 @@ module.exports = {
       body: JSON.stringify(id),
     });
   },
+  canLogin: (data) => {
+    const formData = new FormData();
+    formData.append('email', data.email);
+    formData.append('password', data.password);
+    return fetch('http://212.47.252.1/~purpleunikorn/api-ndi/public/index.php/v1/bros/login', {
+      method: 'POST',
+      body: formData,
+    })
+      .then(response => response.json())
+      .then(json => json.connected);
+  },
   submitEvent: (data) => {
     const formData = new FormData();
-    formData.append('name', data.name);
-    formData.append('date', data.date);
-    formData.append('place', data.place);
-    formData.append('emailList', data.emailList);
+    formData.append('event_name', data.name);
+    formData.append('event_date_start', data.date);
+    formData.append('event_address', data.address);
+    formData.append('event_city', data.city);
+    formData.append('event_cp', data.cp);
+    formData.append('list_user', data.emailList);
     fetch('http://212.47.252.1/~purpleunikorn/api-ndi/public/index.php/v1/murge', {
       method: 'POST',
       body: formData,
