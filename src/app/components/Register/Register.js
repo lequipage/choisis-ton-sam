@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Register.scss';
+
 import callApi from '../../callApi';
 
 class Register extends React.Component {
@@ -42,7 +44,8 @@ class Register extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className="register" onSubmit={this.handleSubmit}>
+        <h3 className="register__title">S'inscrire</h3>
         <label htmlFor="username">
           Pseudo :
           <input
@@ -90,9 +93,9 @@ class Register extends React.Component {
             type="checkbox"
             checked={this.state.driver_licence}
             onChange={this.handleInputChange}
-          />
+          /> (Oui / Non)
         </label>
-        <input type="submit" />
+        <input type="submit" value="S'inscrire"/>
       </form>
     );
   }

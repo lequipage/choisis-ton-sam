@@ -27,6 +27,17 @@ module.exports = {
       body: JSON.stringify(id),
     });
   },
+  canLogin: (data) => {
+    const formData = new FormData();
+    formData.append('email', data.email);
+    formData.append('password', data.password);
+    return fetch('http://212.47.252.1/~purpleunikorn/api-ndi/public/index.php/v1/bros/login', {
+      method: 'POST',
+      body: formData,
+    })
+      .then(response => response.json())
+      .then(json => json.connected);
+  },
   submitEvent: (data) => {
     const formData = new FormData();
     formData.append('name', data.name);

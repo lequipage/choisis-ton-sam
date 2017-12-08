@@ -6,15 +6,26 @@ import Home from './pages/Home/Home';
 import Actions from './pages/Actions/Actions';
 
 class App extends React.Component {
-  state = {
-    isConnected: true,
+  constructor(props) {
+    super(props);
+    this.state = {
+      isConnected: false,
+    };
+    this.handle = this.handle.bind(this);
+
+  }
+
+  handle = (connected) => {
+    this.setState({
+      isConnected: connected,
+    })
   }
 
   returnRoute = () => {
     const { isConnected } = this.state;
     if(isConnected)
       return <Actions />
-    return <Home />
+    return <Home handle={(connected) => { this.handle(connected)}}/>
   }
 
   render() {
