@@ -8,6 +8,7 @@ import './Actions.scss';
 import Header from './Header';
 import Box from '../../components/Box';
 import Create from '../Create';
+import Current from '../Current';
 // import './Home.scss';
 
 const Actions = () => (
@@ -26,7 +27,9 @@ const Actions = () => (
           </Link>
           <Route path="/create" component={Create} />
       </div>
+          <Route path="/current" component={Current} />
     </div>
+
   </Router>
 );
 
