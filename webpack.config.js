@@ -31,7 +31,7 @@ const config = {
           options: {
             presets: ['@babel/preset-env'],
           },
-        }, 'eslint-loader'],
+        }],
       }, {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
