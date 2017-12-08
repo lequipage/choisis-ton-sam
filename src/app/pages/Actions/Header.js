@@ -4,7 +4,8 @@ import React from 'react';
 
 const Home = () => (
   <header className="header">
-    <h1>Bienvenue</h1>
+    <h3>Bienvenue, </h3>
+    <h1>Le choix c'est maintenant !</h1>
   </header>
 );
 
