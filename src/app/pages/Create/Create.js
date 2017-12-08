@@ -12,12 +12,15 @@ class Create extends React.Component {
     this.state = {
       name: '',
       date: '',
-      place: '',
+      address: '',
+      city: '',
+      cp: '',
       userList: [],
       currentEmail: ''
     };
-
+    this.handleInputChange = this.handleInputChange.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   listUser = () => {
@@ -32,6 +35,16 @@ class Create extends React.Component {
     this.setState({
       userList: newUserList,
     })
+  }
+
+  handleInputChange(event) {
+    const target = event.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value,
+    });
   }
 
   handleChange(event) {
@@ -55,7 +68,7 @@ class Create extends React.Component {
   render() {
     const { currentEmail } = this.state;
     return (
-      <div className="formWrap" style={{ backgroundImage: `url(${formBack})` }}>>
+      <div className="formWrap">
         <div className="create">
         <h1>Créer ta soirée</h1>
         <p>Créer ta soirée et invite tes amis pour pouvoir trouver un SAM</p>
@@ -80,12 +93,32 @@ class Create extends React.Component {
               />
             </label>
             <br />
-            <label htmlFor="place">
-              Lieu :
+            <label htmlFor="address">
+              Adresse :
               <input
-                name="place"
+                name="address"
                 type="text"
-                value={this.state.place}
+                value={this.state.address}
+                onChange={this.handleInputChange}
+              />
+            </label>
+            <br />
+            <label htmlFor="city">
+              City :
+              <input
+                name="city"
+                type="text"
+                value={this.state.city}
+                onChange={this.handleInputChange}
+              />
+            </label>
+            <br />
+            <label htmlFor="cp">
+              Code Postal :
+              <input
+                name="cp"
+                type="text"
+                value={this.state.cp}
                 onChange={this.handleInputChange}
               />
             </label>
@@ -96,8 +129,6 @@ class Create extends React.Component {
               </label>
               <button className="buttonAdd" onClick={this.addParticpant}>+</button>
             </div>
-
-
             <ul>
               {this.listUser()}
             </ul>
@@ -105,7 +136,6 @@ class Create extends React.Component {
           </form>
         </div>
       </div>
-
     );
   }
 }
