@@ -1,5 +1,7 @@
 import React from 'react';
 
+import callApi from '../../callApi';
+
 class Register extends React.Component {
   constructor(props) {
     super(props);
@@ -12,6 +14,7 @@ class Register extends React.Component {
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleInputChange(event) {
@@ -24,9 +27,22 @@ class Register extends React.Component {
     });
   }
 
+  handleSubmit(event) {
+    const { username, email, password, phone, driver_licence } = this.state;
+    const data = {
+      username,
+      email,
+      password,
+      phone,
+      driver_licence: driver_licence ? 1 : 0,
+    };
+    event.preventDefault();
+    callApi.addUser(data);
+  }
+
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <label htmlFor="username">
           Pseudo :
           <input
@@ -76,6 +92,7 @@ class Register extends React.Component {
             onChange={this.handleInputChange}
           />
         </label>
+        <input type="submit" />
       </form>
     );
   }
