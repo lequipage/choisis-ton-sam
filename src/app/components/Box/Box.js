@@ -30,7 +30,7 @@ const returnImgSrc = (type) => {
   }
 }
 const Box = props => (
-  <div className="box">
+  <div>
     <img src={returnImgSrc(props.type)} />
     <h2>{returnBox(props.type)}</h2>
     <p>{props.description}</p>
