@@ -13,6 +13,7 @@ class Login extends React.Component {
     this.state = {
       email: '',
       password: '',
+      errorMessage: false,
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -29,6 +30,14 @@ class Login extends React.Component {
     });
   }
 
+  errorMessage = () => {
+    const { errorMessage } = this.state;
+    if(errorMessage) {
+      return <p style={{ color: "red" }}>Identifiants incorrect</p>
+    }
+    return "";
+  }
+
   handleSubmit(event) {
     const { handle } = this.props;
     const { email, password } = this.state;
@@ -39,7 +48,12 @@ class Login extends React.Component {
     event.preventDefault();
     callApi.canLogin(data)
       .then((response) => {
-        handle(response);
+        if (response) { handle(response); }
+        else {
+          this.setState({
+            errorMessage: true,
+          });
+        }
       });
   }
   render() {
@@ -66,6 +80,7 @@ class Login extends React.Component {
           />
         </label>
         <input type="submit" value="Se connecter" />
+        {this.errorMessage()}
       </form>
     );
   }
