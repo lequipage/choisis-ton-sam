@@ -8,6 +8,7 @@ import './Actions.scss';
 import Header from './Header';
 import Box from '../../components/Box';
 import Create from '../Create';
+import Past from '../Past';
 // import './Home.scss';
 
 const Actions = () => (
@@ -25,6 +26,7 @@ const Actions = () => (
             <Box type="past" color="blue" description="Si jamais tu as oublier qui était le sam à la derniere soirée, et qui était le souyon" />
           </Link>
           <Route path="/create" component={Create} />
+          <Route path="/past" component={Past} />
       </div>
     </div>
   </Router>
