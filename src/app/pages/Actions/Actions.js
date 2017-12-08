@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Actions.scss';
 import Header from './Header';
 import Box from '../../components/Box';
 import Create from '../Create';

@@ -7,7 +7,7 @@ import Actions from './pages/Actions/Actions';
 
 class App extends React.Component {
   state = {
-    isConnected: false,
+    isConnected: true,
   }
 
   returnRoute = () => {

@@ -46,6 +46,8 @@
   },
   "dependencies": {
     "eslint-config-airbnb-base": "^12.1.0",
+    "mdi-react": "^2.0.46-hotfix.0",
+    "postcss-sass": "^0.2.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
