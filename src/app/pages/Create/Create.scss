@@ -1,0 +1,81 @@
+@import "src/assets/stylesheets/config";
+
+
+.formWrap{
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  .create{
+    width: 60%;
+    margin: 50px auto 50px auto;
+    color: white;
+
+    h1{
+      font-size: 72px;
+      margin-bottom: 20px;
+    }
+
+    h2{
+      font-size: 35px;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    p{
+      margin-bottom: 30px;
+    }
+
+    input{
+      width: 100%;
+      height: 45px;
+      margin-bottom: 20px;
+      color: black;
+    }
+
+    label{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .flexInput{
+      display: flex;
+
+          .buttonAdd{
+            width: 10%;
+            background-color: green;
+            color: white;
+            font-weight: bold;
+            border: none;
+            height: 52px!important;
+            border-radius: 0;
+            padding: 0;
+          }
+          label{
+            flex: 1;
+          }
+    }
+
+    ul{
+      color: green;
+    }
+
+    .createSoiree{
+      color: black;
+      background-color: white;
+      border-radius: 50px;
+      padding: 5px 10px 5px 10px;
+      width: 30%!important;
+      margin: auto;
+      cursor: pointer;
+      transition: 0.2s;
+      box-shadow: $shadow-z1;
+    }
+    .createSoiree:hover{
+      box-shadow: $shadow-z2;
+    }
+  }
+}
