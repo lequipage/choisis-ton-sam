@@ -1,0 +1,73 @@
+.header,
+.actions-list { display: none !important; }
+
+#eventList {
+  padding-top: 50px;
+  color: white;
+
+  button {
+    border: 0px;
+    border-radius: 20px;
+    background: #482560;
+    color: #fff;
+    padding: 8px 15px;
+  }
+
+  h1 {
+    font-size: 72px;
+  }
+
+  h2 {
+    margin-top: 20px;
+  }
+
+  .container {
+    width: 80%;
+    text-align: left;
+    margin: 80px auto 0;
+
+    h3 {
+      font-size: 32px;
+      font-weight: 300;
+    }
+
+    ul {
+      padding: 20px 0px 50px;
+
+      li {
+        display: block;
+        background: #FFF;
+        height: 60px;
+
+        .eventList__avatar {
+          height: 80px;
+          width: 80px;
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        .eventList__info {
+          display: inline-block;
+          width: calc(70% - 30px);
+          vertical-align: middle;
+        }
+
+        .eventList__cta {
+          display: inline-block;
+          width: calc(30% - 50px);
+          text-align: right;
+          vertical-align: middle;
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+
+  .sendInvit {
+    margin-top: 60px;
+    h2 {
+      font-size: 72px;
+      color: #482560;
+    }
+  }
+}

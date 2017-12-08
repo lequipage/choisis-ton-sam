@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './App.scss';
+// import './App.scss';
 import Home from './pages/Home/Home';
 import Actions from './pages/Actions/Actions';
 
